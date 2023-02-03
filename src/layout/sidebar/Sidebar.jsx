@@ -6,6 +6,7 @@ import "./Sidebar.css"
 const Sidebar = () => {
   const mobToggle = useContext(contentCreate)
   const value = mobToggle.state.mobileMenuToogle
+  const conxt = useContext(contentCreate)
   const Menus = [
     {
       title: "Home",
@@ -52,6 +53,14 @@ const Sidebar = () => {
       <div className={value ? "mobile_sidebar " : " mobile_sidebar_hidden"}>
         <div className="overlay"></div>
         <div className="sidebar_items ">
+          <i
+            className="fa-solid fa-xmark cancel_mob_tab"
+            onClick={() => {
+              conxt.dispatch({
+                type: "TOOGLE",
+              })
+            }}
+          ></i>
           <ul className="navigation_list">
             {Menus.map((e, idx) => (
               <Link to={e.path} key={idx}>

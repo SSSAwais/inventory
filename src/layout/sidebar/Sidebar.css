@@ -102,6 +102,11 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .cancel_mob_tab {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+  }
   .sidebar_items {
     width: 250px;
   }
@@ -114,6 +119,9 @@
     width: 70%;
     z-index: 111111;
     top: 70px;
+    left: 0;
+    bottom: 0;
+    height: auto;
   }
   .mobile_sidebar_hidden {
     display: none;
@@ -127,6 +135,6 @@
 }
 @media screen and (max-width: 570px) {
   .mobile_sidebar .sidebar_items {
-    width: 90%;
+    width: 280px;
   }
 }
