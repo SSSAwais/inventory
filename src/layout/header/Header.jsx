@@ -40,6 +40,12 @@ const Header = (mobNavTog) => {
     // console.log("burger clicked", mobileNav)
     // mobToggle.dispatch({ type: "TOOGLE" })
     // console.log(mobToggle.state.mobileMenuToogle)
+    conxt.dispatch({
+      type: "TOOGLE",
+    })
+    setFaqToogle(false)
+    setProfileToggle(false)
+    setNotification(false)
   }
 
   return (
@@ -50,7 +56,11 @@ const Header = (mobNavTog) => {
             <div className="col-lg-3 col-md-5 col-sm-6 mobile_header_screen">
               <div className="logo_section d-flex align-items-center">
                 <Link to="#">
-                  <img src={logo} alt="logo " className="img-fluid logo_image" />
+                  <img
+                    src={logo}
+                    alt="logo "
+                    className="img-fluid logo_image"
+                  />
                 </Link>
                 <h2>Inventory Simulator</h2>
               </div>
@@ -113,11 +123,7 @@ const Header = (mobNavTog) => {
                 <div className="mobile_burger_icon">
                   <i
                     className="fa-solid fa-bars"
-                    onClick={() => {
-                      conxt.dispatch({
-                        type: "TOOGLE",
-                      })
-                    }}
+                    onClick={_handleMobileSidebar}
                   ></i>
                 </div>
               </div>
