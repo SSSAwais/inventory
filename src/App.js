@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
+import "./App.css"
+import Header from "./layout/header/Header"
+import Sidebar from "./layout/sidebar/Sidebar"
+import MainPage from "./pages/mainPage"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="content">
+        <Sidebar />
+
+        <MainPage />
+      </div>
+
+      {/* <MainPage /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
